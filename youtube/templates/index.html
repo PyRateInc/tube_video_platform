@@ -5,19 +5,24 @@ Home
 {% endblock %}
 
 {% block body %}
-<h1>Welcome to Youtube Django Clone</h1><br>
-<br>
 
 {% for video in most_recent_videos %}
-<div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1 class="display-4">{{ video.title }}</h1>
-          <p class="lead">{{ video.description }}</p>
-          <p style="font-size: 7px; color:gray;">Uploaded by {{ video.user }} on {{ video.datetime }} </p>
-          <p style="text-align: right"><a href='/video/{{ video.id }}'>Watch Video</a></p>
-        </div>
+<div class="row tm-catalog-item-list">
+  <div class="col-lg-4 col-md-6 col-sm-12 tm-catalog-item">
+      <div class="position-relative tm-thumbnail-container">
+          <img src="{{ video.id }}#t=20" alt="Image" class="img-fluid tm-catalog-item-img">
+          
+          <a href="/video/{{ video.id }}" class="position-absolute tm-img-overlay">
+              <i class="fas fa-play tm-overlay-icon"></i>
+          </a>
+      </div>    
+      <div class="p-4 tm-bg-gray tm-catalog-item-description">
+          <h3 class="tm-text-primary mb-3 tm-catalog-item-title">{{ video.title }}</h3>
+          <p class="tm-catalog-item-text">{{ video.description }}</p>
+          <p style="font-size: 15px; color:gray;">Uploaded by {{ video.user }} on {{ video.datetime }} </p>
+      </div>
+  </div>
 </div>
+
 {% endfor %}
-
-
 {% endblock %}

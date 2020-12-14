@@ -44,7 +44,7 @@ ROOT_URLCONF = 'youtube_python.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['youtube', os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -109,6 +109,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
-STATICFILES_DIRS=[os.path.join(BASE_DIR,'static')]
-STATIC_ROOT=os.path.join(BASE_DIR, 'static_root')
-MEDIA_ROOT =os.path.join(BASE_DIR, 'media')
+STATIC_ROOT=os.path.join(BASE_DIR, '/static')
+MEDIA_ROOT =os.path.join(BASE_DIR, '/media')
