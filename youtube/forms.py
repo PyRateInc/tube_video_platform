@@ -11,7 +11,7 @@ class RegisterForm(forms.Form):
     email = forms.CharField(label='Email', max_length=20)
 
 class CommentForm(forms.Form):
-    text = forms.CharField(label='text', max_length=300)
+    text = forms.CharField(label='', max_length=300)
     #video = forms.IntegerField(widget=forms.HiddenInput(), initial=1) 
     
 class NewVideoForm(forms.Form):

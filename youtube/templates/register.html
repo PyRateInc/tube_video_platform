@@ -7,7 +7,8 @@ Create a new Account
 
 {% block body %}
 
-<h1>Create a "Youtube Clone with Python" Account</h1><br>
+<h1>Create a Video Platform Account</h1><br>
+
 
 <form action="register" method="POST">
         {% csrf_token %}
@@ -15,4 +16,6 @@ Create a new Account
         <br>
         <button type="submit" class="btn btn-primary">Create Account!</button>
 </form>
+
+
 {% endblock %}
