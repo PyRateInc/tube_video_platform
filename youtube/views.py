@@ -30,6 +30,11 @@ class LogoutView(View):
         logout(request)
         return HttpResponseRedirect('/')
 
+class AboutView(View):
+    template_name = 'about.html'
+    def get(self, request):
+        return render(request, self.template_name)
+
 class VideoView(View):
     template_name = 'video.html'
 

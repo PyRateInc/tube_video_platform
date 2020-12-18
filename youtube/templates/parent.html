@@ -163,11 +163,15 @@ https://templatemo.com/tm-552-video-catalog
                         <div class="p-5 tm-bg-gray h-100">
                             <h3 class="tm-text-primary mb-4">Our Pages</h3>
                             <ul class="list-unstyled tm-footer-links">
-                                <li><a href="#">Our Videos</a></li>
-                                <li><a href="#">License Terms</a></li>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">Privacy Policies</a></li>
+                                <li><a href="/">Home</a></li>
+                                {% if user.is_authenticated %}
+                                <li><a href="/new_video">Upload Video</a></li>
+                                <li><a href="/logout">Log Out</a></li>
+                                {% else %}
+                                <li><a href="/login">Sign In</a></li>
+                                <li><a href="/register">Sign Up</a></li>
+                                {% endif %}
+                                <li><a href="about">About Us</a></li>
                             </ul>
                         </div>                        
                     </div>
