@@ -158,5 +158,6 @@ dmypy.json
 *.vob
 *.wmv
 *.webm
+*.MOV
 
 # End of https://www.toptal.com/developers/gitignore/api/video
