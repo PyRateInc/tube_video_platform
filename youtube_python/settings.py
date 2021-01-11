@@ -109,15 +109,3 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 STATIC_ROOT=os.path.join(BASE_DIR, '/static')
 MEDIA_ROOT =os.path.join(BASE_DIR, '/media')
-
-#If not work, remove this part
-import cloudinary
-import cloudinary.uploader
-import cloudinary.api
-
-
-cloudinary.config( 
-  cloud_name = "dhw1mfejc", 
-  api_key = "473762851782418", 
-  api_secret = "pEK-_XZahbWl_oVZs1YFO_y3858" 
-)
